@@ -1,19 +1,13 @@
 const express = require("express");
 const path = require("path");
+const expressApp = express();
 const bodyParser = require("body-parser");
-const multer = require("multer");
+
+expressApp.use(bodyParser.urlencoded({ extended: true }));
 
 const registerRouter = require("./router/register");
 const loginRouter = require("./router/login");
 const homeRouter = require("./router/home");
-
-const expressApp = express();
-
-expressApp.use(bodyParser.json());
-expressApp.use(bodyParser.urlencoded({ extended: true }));
-expressApp.use(multer().array());
-expressApp.use(express.static("public"));
-
 expressApp.use(registerRouter);
 expressApp.use(loginRouter);
 expressApp.use(homeRouter);
