@@ -1,13 +1,15 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+import bodyParser from "body-parser";
+import registerRouter from "../src/router/register";
+import loginRouter from "../src/router/login";
+import homeRouter from "../src/router/home";
+
+// const to store express application
 const expressApp = express();
-const bodyParser = require("body-parser");
 
 expressApp.use(bodyParser.urlencoded({ extended: true }));
 
-const registerRouter = require("./router/register");
-const loginRouter = require("./router/login");
-const homeRouter = require("./router/home");
 expressApp.use(registerRouter);
 expressApp.use(loginRouter);
 expressApp.use(homeRouter);
@@ -16,4 +18,5 @@ expressApp.use((req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, "views", "error404.html"));
 });
 
+// setting up the port
 expressApp.listen(3000);
