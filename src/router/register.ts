@@ -48,4 +48,4 @@ registerRouter.post("/register", (req, res, next) => {
   res.redirect("/");
 });
 
-export = registerRouter;
+export default registerRouter;

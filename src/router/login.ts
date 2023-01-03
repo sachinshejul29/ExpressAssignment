@@ -9,4 +9,4 @@ loginRouter.get("/", (req, res, next) => {
   res.sendFile(path.join(__dirname, "../", "views", "login.html"));
 });
 
-export = loginRouter;
+export default loginRouter;

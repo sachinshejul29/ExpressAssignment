@@ -35,4 +35,4 @@ homeRouter.post("/home", (req, res, next) => {
   }
 });
 
-export = homeRouter;
+export default homeRouter;
