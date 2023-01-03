@@ -1,9 +1,9 @@
 import express from "express";
 import path from "path";
 import bodyParser from "body-parser";
-import registerRouter from "../src/router/register";
-import loginRouter from "../src/router/login";
-import homeRouter from "../src/router/home";
+import registerRouter from "./router/register";
+import loginRouter from "./router/login";
+import homeRouter from "./router/home";
 
 // const to store express application
 const expressApp = express();

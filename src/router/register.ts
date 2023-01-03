@@ -31,7 +31,7 @@ const users: User[] | undefined = loadUsers();
 
 // setting up the get/fetch request for all data
 registerRouter.get("/register", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "../", "views", "register.html"));
+  res.sendFile(path.join(__dirname, "../../src", "views", "register.html"));
 });
 
 // setting up the post/write request

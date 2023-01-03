@@ -6,7 +6,7 @@ const loginRouter = express.Router();
 
 // setting up the get/fetch request
 loginRouter.get("/", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "../", "views", "login.html"));
+  res.sendFile(path.join(__dirname, "../../src", "views", "login.html"));
 });
 
 export default loginRouter;

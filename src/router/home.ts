@@ -27,7 +27,7 @@ homeRouter.post("/home", (req, res, next) => {
         user.email === req.body.email && user.password === req.body.password
     )
   ) {
-    res.sendFile(path.join(__dirname, "../", "views", "home.html"));
+    res.sendFile(path.join(__dirname, "../../src", "views", "home.html"));
     console.log("logged in");
   } else {
     res.redirect("/");
